@@ -1,0 +1,100 @@
+body {
+    margin: 40px 40px;
+}
+
+.game-container {
+    position: relative;
+}
+
+.board-square{
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+    border-color: indigo;
+    border-width: 5px;
+    border-style: solid;
+    float:left;
+    text-align: center;
+    font-size: 3rem;
+    
+}
+
+.merged {
+    animation: pop 200ms ease;
+    -webkit-animation: pop 200ms ease;
+}
+.new {
+    animation: pop-in 200ms ease;
+    -webkit-animation: pop-in 200ms ease;
+}
+
+[data-value = "2"] {
+    background-color: blueviolet;
+}
+
+[data-value = "4"] {
+    background-color: #c065eb;
+}
+[data-value = "8"] {
+    background-color: #ae2deb;
+}
+[data-value = "16"] {
+    background-color: #cb2deb;
+}
+[data-value = "32"] {
+    background-color: #c41ac4;
+}
+[data-value = "64"] {
+    background-color: #db35b7;
+}
+[data-value = "128"] {
+    background-color: #d10fa7;
+}
+[data-value = "256"] {
+    background-color: #d64f9e;
+}
+[data-value = "512"] {
+    background-color: #e62263;
+}
+[data-value = "1024"] {
+    background-color: #e62294;
+    font-size: 2rem;
+}
+[data-value = "2048"] {
+    background-color: #eb0753;
+    font-size: 2rem;
+}
+
+@keyframes pop {
+    from{transform: scale(1)}
+    50%{transform: scale(1.05);}
+    to{transform: scale(1);}
+}
+
+@-webkit-keyframes pop {
+    from{-webkit-transform: scale(1);}
+    50%{-webkit-transform: scale(1.05);}
+    to{-webkit-transform: scale(1);}
+}
+
+@keyframes pop-in {
+    from{transform: scale(0.7);}
+    to{transform: scale(1);}
+}
+
+@-webkit-keyframes pop-in {
+    from{-webkit-transform: scale(0.7);}
+    to{-webkit-transform: scale(1);}
+}
+
+@media screen and (max-width: 520px) {
+
+    body{
+        margin: 2px 2px;
+    }
+    .board-square{
+        width: 75px;
+        height: 75px;
+        border-width: 2px;
+    }
+}
